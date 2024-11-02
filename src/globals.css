@@ -1,0 +1,331 @@
+/*///////////////////////////////////////////////// General Styles ////////////////////////////////////////////////*/
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+#root, .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main-content {
+    flex: 1;
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////// Login Page Styles //////////////////////////////////////////////*/
+.login-page {
+    background-image: url('/public/bg.jpeg'); /* Background image */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+.auth-container {
+    background-color: white; /* White background for the form */
+    padding: 40px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(114, 53, 53, 0.2); /* Shadow effect */
+    width: 500px; /* Fixed width for the form */
+}
+.form-header {
+    display: flex;
+    justify-content: space-between;
+}
+.toggle-btn {
+    flex: 2; /* Equal space for buttons */
+    padding: 10px;
+    margin-right: 20px; /* Space between buttons */
+    margin-bottom: 15px;
+}
+.toggle-btn:last-child {
+    margin-right: 0; /* Remove margin for the last button */
+}
+.auth-form .input-container {
+    margin-bottom: 15px; /* Space between input fields */
+}
+.auth-form input {
+    width: 100%; /* Full width input fields */
+    padding: 10px; /* Padding inside input fields */
+    border: 1px solid #635e5e; /* Border style */
+    border-radius: 5px; /* Rounded corners for input fields */
+}
+.auth-btn {
+    background-color: #007BFF; /* Button color */
+    margin-left: 15px;
+    color: white; /* Text color */
+    padding: 10px; /* Padding inside button */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+.auth-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+/*/////////////////////////////////////////////// Nav bar /////////////////////////////////////////////////////////*/
+.navbar {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Center items vertically */
+    background-color: #529ff2; /* Background color for the navbar */
+    padding: 10px 20px; /* Padding around the navbar */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Align to the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.logo-container {
+    display: flex; /* Use flexbox to align logo and text */
+    align-items: center; /* Center items vertically */
+}
+
+.logo {
+    height: 40px; /* Set a height for the logo */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.logo-text {
+    font-size: 24px; /* Adjust font size as needed */
+    color: rgb(255, 255, 255); /* Text color for the logo text */
+}
+
+.navbar-links {
+    display: flex; /* Use flexbox for alignment */
+}
+
+.navbar a,
+.navbar button {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline from links */
+    margin-left: 20px; /* Space between items */
+    padding: 10px 15px; /* Padding inside buttons */
+    border: none; /* Remove border from buttons */
+    background: transparent; /* Transparent background for links */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.navbar a:hover,
+.navbar button:hover {
+    background-color: rgba(226, 197, 29, 0.925); /* Light hover effect */
+}
+
+.logout-button {
+    margin-right: 15px; /* Ensure space before logout button */
+}
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////// Home page //////////////////////////////////////////////////////*/
+.home {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: left; /* Center items horizontally */
+    padding: 50px; /* Add some padding */
+}
+.home h1 {
+    color: #333; /* Set a color that contrasts with the background */
+    font-size: 2rem; /* Adjust font size as needed */
+    margin-bottom: 20px; /* Space below the heading */
+}
+.search-container {
+    margin: 20px; /* Margin around the search bar */
+}
+.search-bar {
+    display: flex; /* Flexbox for input and button */
+    justify-content: center; /* Center items */
+}
+.search-bar input {
+    padding: 15px; /* Increased padding for a larger input */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Border style */
+    margin-bottom: 10px;
+    width: 300px; /* Set a fixed width for the input */
+    font-size: 16px; /* Increase font size for better readability */
+}
+.search-bar button {
+    padding: 15px; /* Increased padding for a larger button */
+    margin-left: 10px; /* Space between input and button */
+    margin-bottom: 10px;
+    background-color: #007BFF; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Increase font size for better readability */
+}
+.search-bar button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+.search-results {
+    margin-top: 20px; /* Space above results */
+}
+.search-results ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+.search-results li {
+    margin-bottom: 10px; /* Space between items */
+    padding: 10px; /* Padding inside each item */
+    border: 1px solid #ccc; /* Border around each item */
+    border-radius: 5px; /* Rounded corners */
+}
+.search-results img {
+    margin-left: 10px; /* Space between text and image */
+}
+.book-button {
+    margin-left: auto; /* Push button to the right */
+    padding: 10px 15px; /* Padding inside button */
+    background-color: #28a745; /* Green color for button */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.book-button:hover {
+    background-color: #218838; /* Darker shade on hover */
+}
+/* Offers Section Styles */
+.offers-container {
+    display: flex;
+    margin-top: 20px; /* Space above offers section */
+}
+/* Offers Section Styles */
+.offers {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center images horizontally */
+    flex-wrap: wrap; /* Allow images to wrap to the next line if they exceed container width */
+}
+.offer-image {
+    width: 450px; /* Set a fixed width for offer images */
+    height: 350px; /* Set a fixed height for offer images */
+    margin-right: 10px; /* Space between images */
+    margin-bottom: 15px; /* Space below each image */
+    border-radius: 5px; /* Rounded corners for images */
+}
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////// Footer Styles //////////////////////////////////////////////////*/
+.footer {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    align-items: start; /* Align items at the start */
+    background-color: #007BFF; /* Background color for footer */
+    color: white; /* Text color for footer */
+    padding: 20px; /* Padding inside footer */
+}
+.social-media {
+    display: flex;
+    flex-direction: column; /* Stack social media items vertically */
+}
+.social-icons {
+    display: flex; /* Use flexbox for alignment */
+    gap: 10px; /* Space between icons */
+}
+.social-icon {
+    width: 40px; /* Set a fixed width for social media icons */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+.footer-text {
+    text-align: center; /* Center align footer text */
+    margin-top: 20px; /* Space above footer text */
+}
+/* Footer Navigation Styles */
+.footer-nav {
+    text-align: center; /* Center align navigation links */
+}
+.footer-nav ul {
+    list-style-type: none; /* Remove bullet points from list */
+    padding: 0; /* Remove default padding */
+}
+.footer-nav li {
+    display: inline; /* Display list items inline */
+    margin-right: 15px; /* Space between links */
+}
+.footer-nav a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+}
+.footer-nav a:hover {
+    text-decoration: underline; /* Underline on hover for better visibility */
+}
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////// vechile card  //////////////////////////////////////////////////*/
+/* Container for the vehicle cards */
+.vehicles-list {
+    margin-top: 50px;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the container */
+}
+
+/* Individual vehicle card styles */
+.vehicle-card {
+    border: 1px solid #ccc; /* Border around the card */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    text-align: center; /* Center align text */
+    background-color: #fff; /* White background */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow effect */
+}
+
+.vehicle-card img {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for image */
+}
+
+.vehicle-card h2 {
+    font-size: 1.5rem; /* Title font size */
+    margin-top: 10px; /* Space above title */
+}
+
+.vehicle-card p {
+    margin-top: 10px; /* Space above price text */
+}
+
+.vehicle-card button {
+    margin-top: 15px; /* Space above button */
+    padding: 10px 15px; /* Padding inside button */
+    background-color: #007BFF; /* Button color */
+    color: white; /* Text color for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.vehicle-card button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////// vechile card  //////////////////////////////////////////////////*/
+.about-container {
+    max-width: 800px; /* Maximum width for the content */
+    margin: 20px auto; /* Center horizontally with margin */
+    padding: 20px; /* Padding inside the container */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.about-container h1 {
+    font-size: 2rem; /* Font size for main heading */
+    color: #333; /* Dark color for text */
+}
+
+.about-container h2 {
+    font-size: 1.5rem; /* Font size for subheadings */
+    color: #007BFF; /* Blue color for subheadings */
+}
+
+.about-container p {
+    font-size: 1rem; /* Regular font size for paragraphs */
+    line-height: 1.6; /* Line height for better readability */
+    color: #555; /* Medium gray color for text */
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
