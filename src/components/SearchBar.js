@@ -15,6 +15,7 @@ const SearchBar = ({ onSearch }) => {
 
   return (
     <div className="search-container">
+      <h1>Hello, What Do You Want?</h1>
       <div className="search-bar">
         <input 
           type="text" 

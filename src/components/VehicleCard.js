@@ -9,7 +9,7 @@ const VehicleCard = ({ vehicle, type }) => {
      <div className="vehicle-card">
          <img src={vehicle.image} alt={`${vehicle.make} ${vehicle.model}`} />
          <h2>{vehicle.make} {vehicle.model}</h2>
-         <p>Price: ${vehicle.price} per day</p>
+         <p>Price: ₹{vehicle.price} per day</p>
          {(type === "bike" || type === "car" || type === "cargo") ? (
              <button onClick={handleBooking}>Book Now</button>
          ) : null}

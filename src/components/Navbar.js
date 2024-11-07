@@ -10,14 +10,12 @@ const Navbar = ({ setIsAuthenticated }) => {
   return (
     <nav className="navbar">
       <div className="logo-container">
-        <img src={`${process.env.PUBLIC_URL}/logo.jpg`} alt="Logo" className="logo" />
-        <span className="logo-text">Rent My Cargo</span>
+        <Link to="/" className="logo-link">
+          <img src={`${process.env.PUBLIC_URL}/logo.jpg`} alt="Logo" className="logo"></img>
+          <span className="logo-text">Rent My Cargo</span>
+        </Link>
       </div>
       <div className="navbar-links">
-        <Link to="/">Home</Link>
-        <Link to="/bikes">Bikes</Link>
-        <Link to="/cars">Cars</Link>
-        <Link to="/cargo">Cargo</Link>
         <Link to="/about">About</Link>
         <button onClick={handleLogout} className="logout-button">Logout</button>
       </div>

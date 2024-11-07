@@ -15,12 +15,26 @@ const Offers = () => {
     '/cargooffer3.webp', 
     '/cargooffer4.jpg',
   ];
-
+  const typeImages = [
+    { src: '/biketype.jpeg', alt: 'Bike Type', link: '/Bikes' },
+    { src: '/cartype.jpeg', alt: 'Car Type', link: '/Cars' },
+    { src: '/trucktype.jpeg', alt: 'Truck Type', link: '/Cargo' },
+  ];
   return (
-    <div className="offers">
+    <div>
+      <div className='types'>
+      {typeImages.map((image, index) => (
+        <a key={index} href={image.link} className="type-link">
+          <img src={image.src} alt={image.alt} className="type-image" />
+        </a>
+      ))}
+    </div>
+      <h1>Offers & New Arrivals</h1> 
+    <div className="offers">      
       {offerImages.map((image, index) => (
         <img key={index} src={image} alt={`Offer ${index + 1}`} className="offer-image" />
       ))}
+    </div>
     </div>
   );
 };
